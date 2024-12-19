@@ -1,0 +1,313 @@
+body {
+    font-family: sans-serif;
+    background-color: #2A2725;
+    color: #FAFAFA;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 0;
+    background-color: rgba(42, 39, 37, 0.9);
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(42, 39, 37, 1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo {
+    font-family: sans-serif;
+    font-size: 40px;
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+nav {
+    display: none;
+    font-size: 25px;
+}
+
+nav a {
+    color: #FAFAFA;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFA500;
+}
+.divider{
+        width: 100%;
+        height: 1px;
+        background-color: #333;
+}
+
+
+.hero {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio {
+    padding: 4rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.grid-item h3 {
+    margin-top: 1rem;
+}
+
+.grid-item p {
+    color: #4A4A4A;
+}
+
+.contact {
+    padding: 4rem 0;
+    background-color: #2A2725;
+}
+
+.contact h2 {
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.contact p {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact form > * {
+    grid-column: 1 / -1;
+}
+
+.contact form > input:nth-child(1),
+.contact form > input:nth-child(2) {
+    grid-column:  1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #E88D4B;
+    color: #000;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: start;
+}
+
+button[type="submit"]:hover {
+    background-color: #D67D3B;
+}
+
+footer {
+    border-top: 1px solid #3A3735;
+    padding: 2rem 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+header {
+    padding: 20px;
+}
+
+header .container {
+    flex-direction: column;
+    height: auto;
+}
+
+.logo {
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    nav {
+        flex-direction: row;
+        width: auto;
+    }
+
+    nav a {
+        margin: 0 0 0 2rem;
+    }
+}
+
+footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer p, footer button {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    footer p, footer button {
+        margin: 0;
+    }
+}
+
