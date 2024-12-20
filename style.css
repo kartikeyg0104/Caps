@@ -41,7 +41,6 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    top: 0;
     background-color: rgba(42, 39, 37, 0.9);
     transition: background-color 0.3s ease;
 }
@@ -143,7 +142,7 @@ nav a:hover {
 .contact {
     padding: 4rem 0;
     background-color: #2A2725;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     justify-content: space-around;
 }
@@ -164,11 +163,10 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    padding-right: 40px;
 }
 
-.contact form > * {
-    grid-column: 1 / -1;
+.contact form >*{
+    grid-column: 1/ -2;
 }
 
 .contact form > input:nth-child(1),
@@ -189,11 +187,6 @@ input, textarea {
 
 input::placeholder, textarea::placeholder {
     color: #888;
-}
-
-textarea {
-    min-height: 200px;
-    resize: vertical;
 }
 
 button[type="submit"] {
